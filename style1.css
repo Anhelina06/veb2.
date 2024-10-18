@@ -1,0 +1,132 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header, .footer {
+    background-color: #c7d9f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header h1, .footer h2 {
+    background-color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.header .info-box-right, .footer .menu-info-right {
+    text-align: right;
+}
+
+.header {
+    border-bottom: 1px solid black;
+    height: 150px;
+}
+
+.footer {
+    border-top: 1px solid black;
+    height: 150px;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar {
+    background-color: #fef9c3;
+    width: 270px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.main-content {
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.main-content img.responsive-img {
+    width: calc(50%);
+    height: auto;
+    max-width: 100%;
+}
+
+.bottom-content {
+    background-color: #e0f5d1;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+li {
+    padding: 5px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007bff; /* Blue color when hovering */
+    text-decoration: underline; /* Underline when hovering */
+}
+
+@media (max-width: 850px) {
+    .sidebar-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border: none;
+    }
+
+    .header, .footer {
+        height: auto;
+    }
+
+    .main-content img.responsive-img {
+        width: 100%; /* Images take full width on smaller screens */
+    }
+
+    .bottom-content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; /* Full width on smaller screens */
+    }
+}
